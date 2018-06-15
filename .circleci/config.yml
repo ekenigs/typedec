@@ -1,0 +1,32 @@
+version: 2
+jobs:
+    build:
+        working_directory: ~/typedec
+        docker:
+          - image: circleci/node:10.10.0
+
+        steps:
+          - checkout
+
+          - restore_cache:
+                keys:
+                  - v1-node_modules-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
+                  - v1-node_modules-{{ checksum "package.json" }}-
+                  - v1-node_modules-
+
+          - run:
+              name: Install Dependencies
+              command: npm install
+
+          - save_cache:
+              key: v1-node_modules-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
+              paths:
+                - node_modules
+
+          - run:
+              name: Run Linter
+              command: npm run lint
+
+          - run:
+              name: Run Tests
+              command: npm run test:ci

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`decorators tBoolean 1`] = `
+Object {
+  "0": Object {
+    "options": undefined,
+    "type": "boolean",
+  },
+  "testBool": Object {
+    "options": undefined,
+    "type": "boolean",
+  },
+}
+`;
+
+exports[`decorators tEnum 1`] = `
+Object {
+  "0": Object {
+    "options": Array [
+      "enum1",
+      "enum2",
+    ],
+    "type": "enum",
+  },
+  "testEnum": Object {
+    "options": Array [
+      "enum1",
+      "enum2",
+    ],
+    "type": "enum",
+  },
+}
+`;
+
+exports[`decorators tInstance tInstance 1`] = `
+Object {
+  "0": Object {
+    "options": "TestClass",
+    "type": "instance",
+  },
+  "testInstance": Object {
+    "options": "TestClass",
+    "type": "instance",
+  },
+}
+`;
+
+exports[`decorators tNumber 1`] = `
+Object {
+  "0": Object {
+    "options": undefined,
+    "type": "number",
+  },
+  "testNumber": Object {
+    "options": undefined,
+    "type": "number",
+  },
+}
+`;
+
+exports[`decorators tString 1`] = `
+Object {
+  "0": Object {
+    "options": undefined,
+    "type": "string",
+  },
+  "testString": Object {
+    "options": undefined,
+    "type": "string",
+  },
+}
+`;
+
+exports[`decorators tSymbol 1`] = `
+Object {
+  "0": Object {
+    "options": undefined,
+    "type": "symbol",
+  },
+  "testSymbol": Object {
+    "options": undefined,
+    "type": "symbol",
+  },
+}
+`;

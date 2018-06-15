@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`typedec parameters any 1`] = `
+Array [
+  AnyParamClass {
+    "testAny": "TEST_STRING",
+  },
+  AnyParamClass {
+    "testAny": true,
+  },
+  AnyParamClass {
+    "testAny": 999,
+  },
+  AnyParamClass {
+    "testAny": Array [],
+  },
+  AnyParamClass {
+    "testAny": Object {},
+  },
+  AnyParamClass {
+    "testAny": undefined,
+  },
+  AnyParamClass {
+    "testAny": null,
+  },
+  AnyParamClass {
+    "testAny": Symbol(),
+  },
+  AnyParamClass {
+    "testAny": "A",
+  },
+  AnyParamClass {
+    "testAny": [Function],
+  },
+  AnyParamClass {
+    "testAny": TestInstance {},
+  },
+]
+`;
+
+exports[`typedec parameters boolean 1`] = `
+Array [
+  [TypeError: must be an boolean],
+  BooleanParamClass {
+    "testBool": true,
+  },
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+]
+`;
+
+exports[`typedec parameters instance 1`] = `
+Array [
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  InstanceParamClass {
+    "testInstance": TestInstance {},
+  },
+]
+`;
+
+exports[`typedec parameters number 1`] = `
+Array [
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  NumberParamClass {
+    "testNumber": 999,
+  },
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+]
+`;
+
+exports[`typedec parameters string 1`] = `
+Array [
+  StringParamClass {
+    "testString": "TEST_STRING",
+  },
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  StringParamClass {
+    "testString": "A",
+  },
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+]
+`;
+
+exports[`typedec parameters symbol 1`] = `
+Array [
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  SymbolParamClass {
+    "testSymbol": Symbol(),
+  },
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+]
+`;
+
+exports[`typedec properties any 1`] = `
+Array [
+  TestClass1 {
+    "testAny": "TEST_STRING",
+  },
+  TestClass1 {
+    "testAny": true,
+  },
+  TestClass1 {
+    "testAny": 999,
+  },
+  TestClass1 {
+    "testAny": Array [],
+  },
+  TestClass1 {
+    "testAny": Object {},
+  },
+  TestClass1 {
+    "testAny": undefined,
+  },
+  TestClass1 {
+    "testAny": null,
+  },
+  TestClass1 {
+    "testAny": Symbol(),
+  },
+  TestClass1 {
+    "testAny": "A",
+  },
+  TestClass1 {
+    "testAny": [Function],
+  },
+  TestClass1 {
+    "testAny": TestInstance {},
+  },
+]
+`;
+
+exports[`typedec properties any 2`] = `
+Array [
+  TestClass2 {
+    "testAny2": "TEST_STRING",
+  },
+  TestClass2 {
+    "testAny2": true,
+  },
+  TestClass2 {
+    "testAny2": 999,
+  },
+  TestClass2 {
+    "testAny2": Array [],
+  },
+  TestClass2 {
+    "testAny2": Object {},
+  },
+  TestClass2 {
+    "testAny2": undefined,
+  },
+  TestClass2 {
+    "testAny2": null,
+  },
+  TestClass2 {
+    "testAny2": Symbol(),
+  },
+  TestClass2 {
+    "testAny2": "A",
+  },
+  TestClass2 {
+    "testAny2": [Function],
+  },
+  TestClass2 {
+    "testAny2": TestInstance {},
+  },
+]
+`;
+
+exports[`typedec properties boolean 1`] = `
+Array [
+  [TypeError: must be an boolean],
+  TestClass1 {
+    "testBool": true,
+  },
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+]
+`;
+
+exports[`typedec properties boolean 2`] = `
+Array [
+  [TypeError: must be an boolean],
+  TestClass2 {
+    "testBool": true,
+  },
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+]
+`;
+
+exports[`typedec properties boolean 3`] = `
+Array [
+  [TypeError: must be an boolean],
+  TestClass2 {
+    "testBool2": true,
+  },
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+  [TypeError: must be an boolean],
+]
+`;
+
+exports[`typedec properties enum 1`] = `
+Array [
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  TestClass1 {
+    "testEnum": "A",
+  },
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+]
+`;
+
+exports[`typedec properties enum 2`] = `
+Array [
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  TestClass2 {
+    "testEnum": "A",
+  },
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+]
+`;
+
+exports[`typedec properties enum 3`] = `
+Array [
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+  TestClass2 {
+    "testEnum2": "A",
+  },
+  [TypeError: must be on of A,B],
+  [TypeError: must be on of A,B],
+]
+`;
+
+exports[`typedec properties instance 1`] = `
+Array [
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  TestClass1 {
+    "testInstance": TestInstance {},
+  },
+]
+`;
+
+exports[`typedec properties instance 2`] = `
+Array [
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  TestClass2 {
+    "testInstance": TestInstance {},
+  },
+]
+`;
+
+exports[`typedec properties instance 3`] = `
+Array [
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  [TypeError: must be an instance of TestInstance],
+  TestClass2 {
+    "testInstance2": TestInstance {},
+  },
+]
+`;
+
+exports[`typedec properties number 1`] = `
+Array [
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  TestClass1 {
+    "testNumber": 999,
+  },
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+]
+`;
+
+exports[`typedec properties number 2`] = `
+Array [
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  TestClass2 {
+    "testNumber": 999,
+  },
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+]
+`;
+
+exports[`typedec properties number 3`] = `
+Array [
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  TestClass2 {
+    "testNumber2": 999,
+  },
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+  [TypeError: must be a number],
+]
+`;
+
+exports[`typedec properties string 1`] = `
+Array [
+  TestClass1 {
+    "testString": "TEST_STRING",
+  },
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  TestClass1 {
+    "testString": "A",
+  },
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+]
+`;
+
+exports[`typedec properties string 2`] = `
+Array [
+  TestClass2 {
+    "testString": "TEST_STRING",
+  },
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  TestClass2 {
+    "testString": "A",
+  },
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+]
+`;
+
+exports[`typedec properties string 3`] = `
+Array [
+  TestClass2 {
+    "testString2": "TEST_STRING",
+  },
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+  TestClass2 {
+    "testString2": "A",
+  },
+  [TypeError: must be a string],
+  [TypeError: must be a string],
+]
+`;
+
+exports[`typedec properties symbol 1`] = `
+Array [
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  TestClass1 {
+    "testSymbol": Symbol(),
+  },
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+]
+`;
+
+exports[`typedec properties symbol 2`] = `
+Array [
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  TestClass2 {
+    "testSymbol": Symbol(),
+  },
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+]
+`;
+
+exports[`typedec properties symbol 3`] = `
+Array [
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  TestClass2 {
+    "testSymbol2": Symbol(),
+  },
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+  [TypeError: must be a symbol],
+]
+`;
