@@ -13,5 +13,12 @@ module.exports = {
         "js",
         "jsx",
         "json"
-    ]
+    ],
+    "collectCoverageFrom": [
+        "<rootDir>/src/**/*.{ts,js}"
+    ],
+    "coveragePathIgnorePatterns": [
+        "<rootDir>/src/index.ts"
+    ],
+    "coverageDirectory": "coverage"
 };
