@@ -20,5 +20,6 @@ module.exports = {
     "coveragePathIgnorePatterns": [
         "<rootDir>/src/index.ts"
     ],
-    "coverageDirectory": "coverage"
+    "coverageDirectory": "coverage",
+    "setupTestFrameworkScriptFile": "<rootDir>/__tests__/setupFile.ts"
 };

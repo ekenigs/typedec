@@ -1,5 +1,3 @@
-import "reflect-metadata";
-
 import { IMetadata } from "./types";
 import { TYPEDEC_METADATA } from "./constants";
 

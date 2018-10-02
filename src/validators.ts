@@ -29,7 +29,7 @@ export function validateSymbol(value: any): void {
 
 export function validateEnum(value: any, options: any[]): void {
     if (!options.includes(value)) {
-        throw new TypeError(`must be on of ${options}`);
+        throw new TypeError(`must be one of ${options}`);
     }
 }
 

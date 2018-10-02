@@ -262,55 +262,55 @@ Array [
 
 exports[`typedec properties enum 1`] = `
 Array [
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
   TestClass1 {
     "testEnum": "A",
   },
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
 ]
 `;
 
 exports[`typedec properties enum 2`] = `
 Array [
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
   TestClass2 {
     "testEnum": "A",
   },
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
 ]
 `;
 
 exports[`typedec properties enum 3`] = `
 Array [
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
   TestClass2 {
     "testEnum2": "A",
   },
-  [TypeError: must be on of A,B],
-  [TypeError: must be on of A,B],
+  [TypeError: must be one of A,B],
+  [TypeError: must be one of A,B],
 ]
 `;
 

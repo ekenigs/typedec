@@ -89,7 +89,7 @@ describe("validators", () => {
                     { enum: { type: Types.enum, options: [ "ONE", "TWO" ] } },
                     "enum",
                     undefined,
-                )).toThrowError("must be on of ONE,TWO");
+                )).toThrowError("must be one of ONE,TWO");
             });
         });
 
