@@ -12,11 +12,11 @@ class TestClass {
     }
 }
 
-new TestClass(null); // TypeError: must be an boolean
+new TestClass(null); // TypeError: 0 must be an boolean
 
 const t: TestClass = new TestClass(true);
 
-t.foo = 100; // // TypeError: must be an boolean
+t.foo = 100; // TypeError: foo must be an boolean
 
 t.foo = false;
 ```

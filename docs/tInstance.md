@@ -14,11 +14,11 @@ class TestClass {
     }
 }
 
-new TestClass(null); // TypeError: must be an instance of Foo
+new TestClass(null); // TypeError: 0 must be an instance of Foo
 
 const t: TestClass = new TestClass(new Foo());
 
-t.foo = 100; // // must be an instance of Foo
+t.foo = 100; // TypeError: foo must be an instance of Foo
 
 t.foo = new Foo();
 ```

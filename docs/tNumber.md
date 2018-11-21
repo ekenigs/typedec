@@ -12,11 +12,11 @@ class TestClass {
     }
 }
 
-new TestClass(null); // TypeError: must be a number
+new TestClass(null); // TypeError: 0 must be a number
 
 const t: TestClass = new TestClass(100);
 
-t.foo = "foo"; // // TypeError: must be a number
+t.foo = "foo"; // TypeError: foo must be a number
 
 t.foo = 100;
 ```

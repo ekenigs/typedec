@@ -19,11 +19,11 @@ class TestClass {
     }
 }
 
-new TestClass(null); // TypeError: must be one of A,B
+new TestClass(null); // TypeError: 0 must be one of A,B
 
 const t: TestClass = new TestClass(TestEnum.A);
 
-t.foo = 100; // // TypeError: must be one of A,B
+t.foo = 100; // TypeError: foo must be one of A,B
 
 t.foo = TestEnum.B;
 ```

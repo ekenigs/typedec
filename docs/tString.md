@@ -12,11 +12,11 @@ class TestClass {
     }
 }
 
-new TestClass(null); // TypeError: must be a string
+new TestClass(null); // TypeError: 0 must be a string
 
 const t: TestClass = new TestClass("foo");
 
-t.foo = 100; // // TypeError: must be a string
+t.foo = 100; // TypeError: foo must be a string
 
 t.foo = "baz";
 ```
