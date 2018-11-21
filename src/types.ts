@@ -31,4 +31,5 @@ export interface IMetadata {
 
 export type TypedecDecorator = <T extends {new(...params: any[]): {}}>(constructor: T) => T;
 export type TypeDecorator = (target: any, property?: string, index?: number) => void;
-export type TypeDecoratorFactory<O extends Options> = (options?: O) => TypeDecorator;
+export type TypeDecoratorFactoryWithOptions<O extends Options> = (options: O) => TypeDecorator;
+export type TypeDecoratorFactoryWithoutOptions<O extends Options> = (options?: O) => TypeDecorator;

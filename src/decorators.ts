@@ -9,24 +9,24 @@ import {
     EnumOptions,
     InstanceOptions,
     TypeDecorator,
-    TypeDecoratorFactory,
+    TypeDecoratorFactoryWithOptions,
+    TypeDecoratorFactoryWithoutOptions,
 } from "./types";
 
-function createTypeDecoratorFactory<O extends Options>(type: Types): TypeDecoratorFactory<O> {
-    return <T>(options: T): TypeDecorator => {
+type WithOptions<O> = TypeDecoratorFactoryWithOptions<O>;
+type WithoutOptions<O> = TypeDecoratorFactoryWithoutOptions<O>;
+
+function createTypeDecoratorFactory<O extends Options>(type: Types): WithOptions<O> | WithoutOptions<O> {
+    return <T>(options?: T): TypeDecorator => {
         return (target: any, property?: string, index?: number): void => {
             const metadata: any = { type, options };
 
-            if (type === Types.enum) {
-                metadata.options = Object.values(options);
-            }
-
             if (type === Types.instance) {
-                if (!options || typeof options !== "function" || !(options as any).name) {
+                if (!options || typeof options !== "function" || !options.name) {
                     throw new TypeError("InstanceOptions must be a class");
                 }
 
-                metadata.options = (options as any).name;
+                metadata.options = options.name;
             }
 
             if (typeof index === "number") {
@@ -38,9 +38,13 @@ function createTypeDecoratorFactory<O extends Options>(type: Types): TypeDecorat
     };
 }
 
-export const tString: TypeDecoratorFactory<StringOptions> = createTypeDecoratorFactory(Types.string);
-export const tBoolean: TypeDecoratorFactory<BooleanOptions> = createTypeDecoratorFactory(Types.boolean);
-export const tNumber: TypeDecoratorFactory<NumberOptions> = createTypeDecoratorFactory(Types.number);
-export const tSymbol: TypeDecoratorFactory<SymbolOptions> = createTypeDecoratorFactory(Types.symbol);
-export const tEnum: TypeDecoratorFactory<EnumOptions> = createTypeDecoratorFactory(Types.enum);
-export const tInstance: TypeDecoratorFactory<InstanceOptions> = createTypeDecoratorFactory(Types.instance);
+export const tString: WithoutOptions<StringOptions> = createTypeDecoratorFactory(
+    Types.string) as WithoutOptions<StringOptions>;
+export const tBoolean: WithoutOptions<BooleanOptions> = createTypeDecoratorFactory(
+    Types.boolean) as WithoutOptions<BooleanOptions>;
+export const tNumber: WithoutOptions<NumberOptions> = createTypeDecoratorFactory(
+    Types.number) as WithoutOptions<NumberOptions>;
+export const tSymbol: WithoutOptions<SymbolOptions> = createTypeDecoratorFactory(
+    Types.symbol) as WithoutOptions<SymbolOptions>;
+export const tEnum: WithOptions<EnumOptions> = createTypeDecoratorFactory(Types.enum);
+export const tInstance: WithOptions<InstanceOptions> = createTypeDecoratorFactory(Types.instance);

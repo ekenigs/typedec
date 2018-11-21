@@ -1,68 +1,88 @@
 import { Types, IMetadata, IConfig } from "./types";
 
-// TODO:
-// improve error messages. e.g. show property name
-// improve stacktrace
-export function validateString(value: any): void {
+function typeErrorFactory(message: string): TypeError {
+    const error: TypeError = new TypeError(message);
+    const limit: number = (Error as any).stackTraceLimit || 10;
+
+    (Error as any).stackTraceLimit = limit + 6;
+
+    if (error.stack) {
+        error.stack = error.stack
+            .split("\n")
+            .filter((value: string) => !/node_modules.*typedec/.test(value))
+            .filter((value: string, index: number) => {
+                return !(index === 1 && value.includes("at Array.forEach (<anonymous>)"));
+            })
+            .join("\n");
+    }
+
+    (Error as any).stackTraceLimit = limit;
+
+    return error;
+}
+
+export function validateString(property: string, value: any): void {
     if (typeof value !== "string") {
-        throw new TypeError(`must be a string`);
+        throw typeErrorFactory(`${property} must be a string`);
     }
 }
 
-export function validateBoolean(value: any): void {
+export function validateBoolean(property: string, value: any): void {
     if (typeof value !== "boolean") {
-        throw new TypeError(`must be an boolean`);
+        throw typeErrorFactory(`${property} must be an boolean`);
     }
 }
 
-export function validateNumber(value: any): void {
+export function validateNumber(property: string, value: any): void {
     if (typeof value !== "number") {
-        throw new TypeError(`must be a number`);
+        throw typeErrorFactory(`${property} must be a number`);
     }
 }
 
-export function validateSymbol(value: any): void {
+export function validateSymbol(property: string, value: any): void {
     if (typeof value !== "symbol") {
-        throw new TypeError(`must be a symbol`);
+        throw typeErrorFactory(`${property} must be a symbol`);
     }
 }
 
-export function validateEnum(value: any, options: any[]): void {
-    if (!options.includes(value)) {
-        throw new TypeError(`must be one of ${options}`);
+export function validateEnum(property: string, value: any, options: any): void {
+    const validValues: string[] = Object.values(options);
+
+    if (!validValues.includes(value)) {
+        throw typeErrorFactory(`${property} must be one of ${validValues}`);
     }
 }
 
-export function validateInstance(value: any, options: any): void {
+export function validateInstance(property: string, value: any, options: any): void {
     if (!value || !value.constructor || !value.constructor.name || value.constructor.name !== options) {
-        throw new TypeError(`must be an instance of ${options}`);
+        throw typeErrorFactory(`${property} must be an instance of ${options}`);
     }
 }
 
-export function validateType(config: IConfig, value: any): void {
+export function validateType(config: IConfig, property: string, value: any): void {
     switch (config.type) {
         case Types.string:
-            validateString(value);
+            validateString(property, value);
             break;
 
         case Types.boolean:
-            validateBoolean(value);
+            validateBoolean(property, value);
             break;
 
         case Types.number:
-            validateNumber(value);
+            validateNumber(property, value);
             break;
 
         case Types.symbol:
-            validateSymbol(value);
+            validateSymbol(property, value);
             break;
 
         case Types.enum:
-            validateEnum(value, config.options as any);
+            validateEnum(property, value, config.options);
             break;
 
         case Types.instance:
-            validateInstance(value, config.options);
+            validateInstance(property, value, config.options);
             break;
 
         default:
@@ -77,7 +97,7 @@ export function validateProperty(metadata: IMetadata, property: string, value: a
         return;
     }
 
-    validateType(config, value);
+    validateType(config, property, value);
 }
 
 export function validateParameters(metadata: IMetadata, parameters: any[]): void {

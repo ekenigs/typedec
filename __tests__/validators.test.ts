@@ -1,4 +1,4 @@
-import { validateProperty } from "../src/validators";
+import { validateProperty, validateParameters } from "../src/validators";
 import { Types } from "../src/types";
 
 describe("validators", () => {
@@ -17,7 +17,14 @@ describe("validators", () => {
                     { str: { type: Types.string, options: {} } },
                     "str",
                     undefined,
-                )).toThrowError("must be a string");
+                )).toThrowError();
+            });
+
+            it("should throw Error param", () => {
+                expect(() => validateParameters(
+                    { 0: { type: Types.string, options: {} } },
+                    [ 0 ],
+                )).toThrowError();
             });
         });
 
@@ -35,7 +42,7 @@ describe("validators", () => {
                     { bool: { type: Types.boolean, options: {} } },
                     "bool",
                     undefined,
-                )).toThrowError("must be an boolean");
+                )).toThrowError();
             });
         });
 
@@ -53,7 +60,7 @@ describe("validators", () => {
                     { num: { type: Types.number, options: {} } },
                     "num",
                     undefined,
-                )).toThrowError("must be a number");
+                )).toThrowError();
             });
         });
 
@@ -71,7 +78,7 @@ describe("validators", () => {
                     { sym: { type: Types.symbol, options: {} } },
                     "sym",
                     undefined,
-                )).toThrowError("must be a symbol");
+                )).toThrowError();
             });
         });
 
@@ -89,7 +96,7 @@ describe("validators", () => {
                     { enum: { type: Types.enum, options: [ "ONE", "TWO" ] } },
                     "enum",
                     undefined,
-                )).toThrowError("must be one of ONE,TWO");
+                )).toThrowError();
             });
         });
 
@@ -108,7 +115,7 @@ describe("validators", () => {
                     { instance: { type: Types.instance, options: "TestClass" } },
                     "instance",
                     undefined,
-                )).toThrowError("must be an instance of TestClass");
+                )).toThrowError();
             });
 
             it("should throw Error because value is wrong instance", () => {
@@ -117,7 +124,25 @@ describe("validators", () => {
                     { instance: { type: Types.instance, options: "TestClass" } },
                     "instance",
                     new TestClass2(),
-                )).toThrowError("must be an instance of TestClass");
+                )).toThrowError();
+            });
+        });
+    });
+
+    describe("validateParameters", () => {
+        describe("string", () => {
+            it("should pass", () => {
+                expect(() => validateParameters(
+                    { 0: { type: Types.string, options: {} } },
+                    [ "str" ],
+                )).not.toThrowError();
+            });
+
+            it("should throw Error param", () => {
+                expect(() => validateParameters(
+                    { 0: { type: Types.string, options: {} } },
+                    [ 0 ],
+                )).toThrowError();
             });
         });
     });

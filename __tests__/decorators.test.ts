@@ -77,7 +77,7 @@ describe("decorators", () => {
         it("should throw an error because no options", () => {
             expect(() => {
                 class TInstanceClass {
-                    @tInstance() public testInstance: any;
+                    @tInstance(undefined as any) public testInstance: any;
                 }
 
                 return TInstanceClass;
