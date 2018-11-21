@@ -3,10 +3,13 @@
     "version": "0.0.1",
     "description": "Runtime type validation for TypeScript with decorators",
     "main": "build/index.js",
+    "types": "build/index.d.ts",
     "scripts": {
         "test": "jest --watch",
         "test:ci": "jest --coverage --forceExit --detectOpenHandles",
-        "lint": "tslint -p tsconfig.json './src/**/*.ts' './__tests__/**/*.ts'"
+        "lint": "tslint -p tsconfig.json './src/**/*.ts' './__tests__/**/*.ts'",
+        "build": "rm -rf build && tsc -d --noEmitOnError",
+        "prepare": "npm run build"
     },
     "homepage": "https://github.com/ekenigs/typedec",
     "repository": "github:ekenigs/typedec",

@@ -1,28 +1,25 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "allowUnusedLabels": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "build",
-    "removeComments": true,
-    "sourceMap": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "target": "ES2017",
-    "typeRoots": [
-        "node_modules/@types"
-    ]
-  },
-  "exclude": [
-    "node_modules",
-    "build"
-  ]
+    "compilerOptions": {
+        "outDir": "build",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es2015",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowUnusedLabels": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "lib": ["es2018"],
+        "types": ["reflect-metadata", "jest"],
+        "typeRoots": ["node_modules/@types"]
+    },
+    "exclude": ["node_modules", "__tests__", "build"]
 }
