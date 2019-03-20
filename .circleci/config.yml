@@ -3,7 +3,7 @@ jobs:
     build:
         working_directory: ~/typedec
         docker:
-          - image: circleci/node:10.15.2
+          - image: circleci/node:10.15.3
 
         steps:
           - checkout
