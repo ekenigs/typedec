@@ -25,7 +25,7 @@
     "devDependencies": {
         "@types/jest": "25.1.0",
         "@types/node": "10.17.13",
-        "husky": "4.0.10",
+        "husky": "4.2.5",
         "jest": "24.9.0",
         "reflect-metadata": "0.1.13",
         "ts-jest": "24.3.0",
